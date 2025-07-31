@@ -1,0 +1,73 @@
+
+git and github -----
+
+
+website frontend --- platfrom ----
+
+html, css, js ---- tools to create platform/ website
+
+git is a tool and github/gitlab is a website/platform to store the code
+
+
+
+why we have to use the github/git ?
+
+
+git is a version control system
+
+
+---------
+
+prerequirements ---
+
+1. vs code 
+
+2. git bash from the browser
+
+3. create account in the github
+
+
+what is repo  ---- folder
+
+
+how to link vs code and github
+
+in 2 ways 
+
+1. click source panel and login to github
+2.  git config --global user.name "Your Name"
+    git config --global user.email "your.email@example.com"
+
+
+
+
+
+steps to push ur code to github
+
+
+status --- u --- untracked 
+	   A --- added
+
+
+1. git init ---- ur initialized the git which tracks ur code
+
+2. git add . ----- this dot says u r adding all files to ur github (list of people to go to trip)
+
+3. git commit -m "msg" ---- mid of the journey
+
+4. git remote add origin https://github.com/shaik-sadhiks007/reactjs-internship.git   ------ location for the trip
+
+5.  git push -u origin main  ------ reaching the location
+
+
+------------------------------
+
+to clone the git repo in the vs code
+
+
+git clone https://github.com/shaik-sadhiks007/reactjs-internship.git
+
+
+to get the updated code in the vs code 
+
+git pull origin main
