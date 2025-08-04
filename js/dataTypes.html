@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> type of data types</h1>
+
+
+    <script>
+        console.log('data types')
+
+
+        // keywords ----- some reserved function in programming language
+
+        // int ----
+
+        // str ----
+
+        // bool ---
+
+
+        // let , const , var ---  three keywords to store any data types
+
+
+        // var a = 5
+
+        // let name = "sadhik"
+
+        // const boolean = true 
+
+
+        // data types in js :
+
+
+        // 1. primitive data types ----  basement
+
+
+        // 2. non primitive data type ---- building
+
+
+        // primitive data types :$
+
+        // 1. number ----- 1, 1.2, 1.232323232
+
+        // 2. string ---- 'a', "sadhik"
+
+        // 3. boolean --- true / false ---
+
+        // 4. null ----- empty
+
+        // 5. undefined ---- not assigned any variable
+
+
+        let a = 5;
+
+        // 2 things
+
+
+        // 1. it is declaring the variable --- creating the a variable
+
+        // 2. it is initalizing the variable ---- assigning the value to it
+
+        console.log(typeof a, "a");
+
+        const name = 'sadhik';
+
+        console.log(typeof name, "name");
+
+        var b = '7'
+
+        console.log(typeof b, 'b')
+
+        let c = true
+
+        console.log(typeof c, "c")
+
+
+        let d = null;
+
+
+        let score;
+
+
+        console.log(score, 'score')
+
+
+        // 2. non primitive data types ---- (reference data types)
+
+        // 1. object 
+
+        // 2. array 
+
+        // 3. functions
+
+
+        // what is Object ---- it is used to define the real time entity
+
+        // it will represented in the key and value pairs
+
+
+        // let sadhik = {
+        //     key : value 
+        // }
+
+
+        // 1, Object
+
+        let person = {
+            name: "sadhik",
+            age: 70,
+            gender: "male",
+        }
+
+        console.log(person, 'person')
+
+        // accessing the properties in the objs
+
+        // use the dot operation
+
+        console.log(person.name, 'person name')
+
+
+
+        // 2. array : group of anything --- numbers, strings , boolean, objects
+
+        // array of strings
+        let students = ["hemanth", "bhanu"]
+
+        // accessing the array based on the positons
+
+        console.log(students[1], 'second position')
+
+
+
+        // array of numbers
+        let lottery = [2, 4, 3, 1]
+
+        console.log(lottery[2], "2")
+
+
+
+        // array of objs
+
+        let tenthClass = [
+
+            {
+                name: 'muhammad',
+                age: 20
+            },
+
+            {
+                name: "bhaumik",
+                age: 20
+            }
+
+        ]
+
+        console.log(tenthClass[1].name, 'tenth class ')
+
+
+        // what is a function ? --- set of code it will run when u call it 
+
+
+        // Syntax:
+
+
+        // function funName() {
+
+        //     // set of code
+
+        // }
+
+
+        function marriage() {
+            console.log('rajesh weds ramya')
+        }
+
+        marriage()
+
+
+        let ab = 5; // it is saved at 1000
+
+        let cd = ab; // it is saved at 1001
+
+        cd = 10
+
+        console.log(cd, ab, "cd")
+
+
+        let personA = {
+            name: "sadhik",
+            age: 70,
+            gender: "male",
+        }
+
+        // it is saved at 1002
+
+
+        let personB = personA
+
+        personB.name = 'checking'
+
+
+        // it won;t save at 1003. it will store location 1002
+
+
+        console.log(personB, 'b per')
+
+        console.log(personA, 'A per')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
