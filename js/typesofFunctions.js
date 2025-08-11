@@ -8,7 +8,7 @@ function sadhik() {
 
 // 2. parameterized function
 
-function addtion(a,b) {
+function addtion(a, b) {
 
     // let a = 5
 
@@ -18,19 +18,19 @@ function addtion(a,b) {
 
 }
 
-addtion(5,10)
+addtion(5, 10)
 
-addtion(20,30)
+addtion(20, 30)
 
-// 3. anonymous function (a fun without name)
+// 3. anonymous function (a fun without name) --- user defined anonymous u have to assign it to a variable
 
-let zVariable = function(a,b) {
+let zVariable = function (a, b) {
 
-    console.log(a * b) 
+    console.log(a * b)
 
 }
 
-zVariable(5,15)
+zVariable(5, 15)
 
 // 4. arrow functions --- 
 
@@ -42,21 +42,14 @@ xVariable()
 
 // 5. callback function --- a function calling the another function
 
-function division(c,d) {
-
-    console.log(c/d,'divison')
-
+function division(c, d) {
+    console.log(c / d, 'divison')
 }
 
 function testing() {
-
     let a = 50
-
     let b = 10
-
-    division(a,b)
-
-
+    division(a, b)
 }
 
 testing()
