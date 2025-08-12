@@ -23,40 +23,40 @@ let arr = ['sadhik', 'bhaumik', 'mohammad', "Naveen", "Akash"]
 
 // console.log(arr[3],'arr')
 
-// for(let i=0; i < arr.length; i++) {
+for(let i=0; i < arr.length; i++) {
 
-//     console.log(arr[i],'arr')
+    console.log(arr[i],'arr')
 
-// }
+}
 
 // using foreach loop : array retrive
 
 // syntax : 
 
-// arr.forEach(
+arr.forEach(
 
-//     (ele, index ) => {
+    (ele, index ) => {
 
-//         console.log(ele,index,'arr foreach')
-//     }
-// )
+        console.log(ele,index,'arr foreach')
+    }
+)
 
 
 let arr2 = [10,20,30,40] 
 
 // foreach is used for to retrive the data not to manipulate the data and storing it 
 
-// let output = arr2.forEach(
+let output = arr2.forEach(
 
-//     (ele,index) => {
-//         // console.log(ele,index,'arr2')
+    (ele,index) => {
+        // console.log(ele,index,'arr2')
 
-//        return ele * 2
-//     }
+       return ele * 2
+    }
 
-// )
+)
 
-// console.log(output,'op')
+console.log(output,'op')
 
 
 
@@ -64,17 +64,17 @@ let arr2 = [10,20,30,40]
 
 
 // using map function we can store the updated array in another variable
-// let output1 = arr2.map(
+let output1 = arr2.map(
 
-//     (ele,index) => {
-//         // console.log(ele,index,'arr2')
+    (ele,index) => {
+        // console.log(ele,index,'arr2')
 
-//        return ele * 2
-//     }
+       return ele * 2
+    }
 
-// )
+)
 
-// console.log(output1,'op1')
+console.log(output1,'op1')
 
 
 let filteredData = arr2.map(
