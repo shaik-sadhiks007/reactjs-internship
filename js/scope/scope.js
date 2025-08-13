@@ -10,7 +10,7 @@
 // 4. lexical scope ----
 
 
-// 1. global scope ---- variable declared in the outof functions and blocks
+// 1. global scope ---- variable declared in the out of functions and blocks
 
 // let a = 5;
 
