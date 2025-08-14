@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dom</title>
+
+    <style>
+        /* #domelement {
+
+            color: red;
+
+        } */
+
+        h1 {
+
+            color: blue;
+
+        }
+    </style>
+
+
 </head>
 
 <body>
 
-    <h1>dom manipulation</h1>
+    <h1 id="domelement" class="myclass">dom manipulation</h1>
+
+    <h1> second h1 tag </h1>
+
+    <p class="myclass">p tag element</p>
 
     <a href="https://www.google.com/" target="_blank">sadhik</a>
 
@@ -19,7 +39,7 @@
         <p>testing</p>
 
         <button> submit</button>
-        
+
     </div>
 
 
@@ -27,11 +47,99 @@
         // what is a dom ?
 
         // dom means document object model , it is like tree structure, it will arrage the html in the tree like structure, by using the dom , we can easily manipulate the dom
-    
-    
-    
-    
-    
+
+
+        // crud ---- create read update and delete
+
+
+        // read of html elements
+
+        // 1. id selector
+
+        // 2. class selector
+
+        // 3. tag selector
+
+        // 4. queryselector
+
+        // 5. queryselectorall
+
+        // ----------------------------------------
+
+        // 1. id selector
+
+        let domElement = document.getElementById("domelement");
+
+        // console.log(domElement, 'h1 in js')
+
+        // console.log(domElement.tagName,'name of the tag')
+
+        // console.log(domElement.textContent,'content of the tag')
+
+        // domElement.textContent = "sadhik updated the code"
+
+        let myclass = document.getElementsByClassName('myclass')
+
+        // console.log(myclass, 'myclass')
+
+        // console.log(myclass[0],'h1 class')
+
+        // console.log(myclass[1],'ptag')
+
+        let h1Tag = document.getElementsByTagName('h1');
+
+        // console.log(h1Tag,'h1tag')
+
+        // console.log(h1Tag[0],'tag selector')
+
+        // console.log(h1Tag[1],'tag selector 2')
+
+
+        // 4. query selector ----- it will give only one element of first result
+
+        // let query1 = document.querySelector('#domelement')
+
+        let query1 = document.querySelector('.myclass')
+
+        console.log(query1, 'query1')
+
+
+        let query2 = document.querySelectorAll('.myclass')
+
+        console.log(query2,'query2')
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 </body>
