@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+
+        h1{
+            background-color: rgba(217, 46, 46,0.5);
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <h1 id="h1Tag" class="myclass testing">
+        this is h1 tag
+    </h1>
+
+    <!-- <h1>
+        <p>this is p tag inside h1tag</p>
+    </h1> -->
+
+
+    <div id="divTag">
+        <p>
+            this is p tag
+        </p>
+    </div>
+
+
+
+    <script>
+
+        console.log('js is started');
+
+        let h1Tag = document.getElementById('h1Tag');
+
+        let divTag = document.getElementById("divTag");
+
+        // to access the content of the html tag ---- use .textcontent
+
+        // console.log(h1Tag.textContent,'h1 content')
+
+        // console.log(divTag.textContent,'div content')
+
+        // to access the innerhtml and content as well  --- childs of tags --- use .innerHtml
+
+        // console.log(h1Tag.innerHTML,'h1 innerhtml')
+
+        // console.log(divTag.innerHTML,'div innerhtml')
+
+        // ----------------------------------
+        // ---- styles ----
+
+        h1Tag.style.color = "rgba(217, 46, 46,0.5)"
+
+        // h1Tag.style.backgroundColor = 'blue'
+
+
+        // h1Tag.textContent = 'hi'
+
+        h1Tag.innerHTML = ' <p>this is p tag inside h1tag</p>'
+
+
+
+
+
+
+
+
+
+
+
+
+
+        console.log(h1Tag, 'h1tag')
+
+        // console.log(divTag,'divtag')
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

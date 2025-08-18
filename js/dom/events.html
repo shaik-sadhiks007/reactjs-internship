@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+
+<body>
+
+    <h1>event class</h1>
+    
+    <!-- // we will call the onclick as event and function as eventlistener -->
+     
+    <button onclick="clickfunction()">
+        sumbit
+    </button>
+
+    <div id="box" onmouseenter="changeBoxColor()" 
+    onmouseout="changeBoxColorOut()">
+        box
+    </div>
+
+    <script>
+
+        console.log('js is started')
+
+        // an event is a action performed by the user
+
+
+        // types of events
+
+        // click, dbclick, keydown, keyup, onchange ---- input fields, mouseenter, mouseout, submit
+
+
+        let box = document.getElementById("box");
+
+        box.style.backgroundColor = "blue"
+
+        box.style.color = 'red'
+
+        box.style.width = '300px'
+
+        box.style.height = '100px'
+
+        function changeBoxColor() {
+
+            box.style.backgroundColor = "red"
+
+            box.style.color = 'blue'
+
+
+        }
+
+        function changeBoxColorOut() {
+
+            box.style.backgroundColor = "pink"
+
+            box.style.color = 'black'
+
+
+        }
+
+
+
+
+
+        function clickfunction() {
+            console.log('you clicked on the button')
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
