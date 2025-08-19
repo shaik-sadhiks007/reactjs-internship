@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <p id="pTag">
+        this is p tag
+    </p>
+
+    <!-- <button >
+        submit
+    </button> -->
+
+    <script>
+
+        console.log('js is started');
+
+        // use the createElement function to create the tags
+
+        let buttonTag = document.createElement('button');
+
+        buttonTag.innerHTML = 'submit'
+
+
+        //syntax
+
+        // buttonTag.addEventListener(event name, callback function)
+
+        // note : it is html , we will use "onclick" like that , it is js we will use "click"
+        buttonTag.addEventListener('click', () => {
+
+            testing()
+        })
+
+        function testing() {
+            alert('you r hacked')
+        }
+
+        document.body.appendChild(buttonTag)
+
+        console.log(buttonTag, 'buttonTag');
+
+
+
+
+
+    </script>
+</body>
+
+</html>
