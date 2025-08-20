@@ -11,13 +11,12 @@
 </head>
 
 <body>
-    <h1 class="text-center text-primary">Todos Application</h1>
-
+    <h1 class="text-center text-primary ">Todos Application</h1>
 
     <div class="d-flex justify-content-center">
-        <input type="text" placeholder="enter the todo">
+        <input type="text" placeholder="enter the todo" id="inputTag">
 
-        <button class="btn btn-primary ms-1">Add Task</button>
+        <button class="btn btn-primary ms-1" onclick="addTodos()">Add Task</button>
     </div>
 
     <ul id="ulTag">
@@ -59,28 +58,31 @@
 
         let ulTag = document.getElementById('ulTag');
 
+        let inputTag = document.getElementById('inputTag')
+
         let todosArray = [
             {
                 title: 'wakeup at 6 am',
                 completed: true
             },
-
             {
                 title: 'reach ofc by 9 am',
                 completed: false
             },
-
-            
             {
                 title: 'go to movie at 7pm',
                 completed: false
             }
         ]
 
+        // Syntax for ternary operators
+        // (condition) ? if code : else code
 
         function showTodos() {
 
             console.log(ulTag, 'ultag in the function')
+
+            ulTag.innerHTML = ''
 
             todosArray.forEach((ele, index) => {
 
@@ -90,9 +92,9 @@
                 liTag.innerHTML =
                     `<div class="d-flex justify-content-center align-items-center gap-2 my-2">
 
-                        <input type="checkbox" />
+                        <input type="checkbox" ${ele.completed ? "checked" : ""}/>
 
-                            <div>
+                            <div class=" ${ele.completed ? 'text-decoration-line-through' : ''} ">
                                 ${ele.title}
                             </div>
 
@@ -116,6 +118,37 @@
 
 
         }
+
+
+        function addTodos() {
+
+            // 1st to get the data from the input field
+
+            console.log(inputTag.value, 'value in input')
+
+            todosArray.push(
+
+            {
+                title : inputTag.value,
+
+                completed : false
+            }
+
+            )
+
+            showTodos()
+
+
+
+            // 2nd way to get the data from the input field using event field
+
+            // console.log(event.target.value,"event")
+
+
+            console.log(todosArray,'todos')
+        }
+
+
 
         showTodos()
 
