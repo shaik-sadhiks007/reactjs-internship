@@ -60,20 +60,9 @@
 
         let inputTag = document.getElementById('inputTag')
 
-        let todosArray = [
-            {
-                title: 'wakeup at 6 am',
-                completed: true
-            },
-            {
-                title: 'reach ofc by 9 am',
-                completed: false
-            },
-            {
-                title: 'go to movie at 7pm',
-                completed: false
-            }
-        ]
+        // json.parse ---- convert json to javascript obj
+
+        let todosArray = JSON.parse(localStorage.getItem('todosArray') || [])
 
         // Syntax for ternary operators
         // (condition) ? if code : else code
@@ -92,17 +81,17 @@
                 liTag.innerHTML =
                     `<div class="d-flex justify-content-center align-items-center gap-2 my-2">
 
-                        <input type="checkbox" ${ele.completed ? "checked" : ""}/>
+                        <input type="checkbox" ${ele.completed ? "checked" : ""} onchange="handleCheckbox(${index})"/>
 
                             <div class=" ${ele.completed ? 'text-decoration-line-through' : ''} ">
                                 ${ele.title}
                             </div>
 
-                            <button class="btn btn-warning mx-2">
+                            <button class="btn btn-warning mx-2" onclick="editTodos(${index})">
                                 edit
                             </button>
 
-                            <button class="btn btn-danger">
+                            <button class="btn btn-danger" onclick="deleteTodos(${index})">
                                 delete
                             </button>
 
@@ -116,7 +105,6 @@
             })
 
 
-
         }
 
 
@@ -128,16 +116,17 @@
 
             todosArray.push(
 
-            {
-                title : inputTag.value,
+                {
+                    title: inputTag.value,
 
-                completed : false
-            }
+                    completed: false
+                }
 
             )
 
             showTodos()
 
+            addToLocalStorage()
 
 
             // 2nd way to get the data from the input field using event field
@@ -145,12 +134,87 @@
             // console.log(event.target.value,"event")
 
 
-            console.log(todosArray,'todos')
+            console.log(todosArray, 'todos')
         }
 
 
 
+        function deleteTodos(position) {
+
+            console.log(position, 'pos')
+
+            // syntax
+
+            // todosArray.splice(starting index where to delete, how many to delete, adding the elements(optional))
+
+            todosArray.splice(position, 1)
+
+            showTodos()
+
+            addToLocalStorage()
+
+        }
+
+
+        function addToLocalStorage() {
+
+            // json --- javascript obj notation
+
+            // {
+            //     "name" : 'sadhik',
+            //     "gender" : "male"
+            // }
+
+
+
+            // json.stringify ---- will convert the javascript obj to json
+
+
+            localStorage.setItem('todosArray', JSON.stringify(todosArray))
+
+        }
+
+
+        function editTodos(positon) {
+
+
+            // console.log(positon,'pos in edit')
+
+
+            let newTitle = prompt("enter the updated todo ")
+
+            console.log(newTitle,'newtitle')
+
+            console.log(todosArray[positon])
+
+            todosArray[positon].title = newTitle;
+
+            showTodos()
+
+            addToLocalStorage()
+
+
+        }
+
+
+        function handleCheckbox(position) {
+            console.log(position,'pos in chekcob')
+
+            todosArray[position].completed = !todosArray[position].completed 
+
+            showTodos()
+
+            addToLocalStorage()
+
+
+
+
+
+        }
+
         showTodos()
+
+
 
 
     </script>
