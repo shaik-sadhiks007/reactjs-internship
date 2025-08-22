@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>this is practice</h1>
+
+    <div id="divTag">
+        <p>
+            testing
+        </p>
+    </div>
+
+    <script>
+
+        console.log('js is running')
+
+        let arr = [
+            {
+                title: 'sadhik',
+
+                completed: false
+            }
+        ]
+
+        let todos = [
+            {
+                title: 'sadhik',
+
+                completed: false
+            }
+        ]
+
+        // localStorage.setItem('key', value)
+
+        localStorage.setItem('arr', arr)
+
+        // javascript to json
+        localStorage.setItem('todos', JSON.stringify(todos))
+
+        let output = localStorage.getItem('arr');
+
+        console.log(output,'output')
+
+
+        // parse ---- for converting json to js obj
+        
+        let output1 = JSON.parse(localStorage.getItem('todos'))
+
+        console.log(output1,'output1')
+
+
+        let divtag = document.getElementById("divTag")
+
+        console.log(divtag,'divtag')
+
+
+        // inside tag
+
+        console.log(divtag.innerHTML,'')
+
+
+        function username() {
+            console.log('username is called')
+        }
+
+
+
+        
+
+    </script>
+</body>
+
+</html>
